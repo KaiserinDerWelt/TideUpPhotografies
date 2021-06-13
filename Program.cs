@@ -54,21 +54,21 @@ namespace TideUpPhotografies
                 {
                     Console.Write(bidimensionalArray[photoSelectionParced, col]);
                     colorValues = colorValues + bidimensionalArray[photoSelectionParced, col];
-            }
+                    
+                }
                 //Evaluador de color
-                if(!colorValues.Contains("C")&&!colorValues.Contains("M") && !colorValues.Contains("Y"))
+                if (!colorValues.Contains("C") && !colorValues.Contains("M") && !colorValues.Contains("Y"))
                 {
                     Console.WriteLine(" Blanco y Negro");
                 }
                 else if (colorValues.Contains("C")  || !colorValues.Contains("M") || !colorValues.Contains("Y"))
                 {
-                    Console.WriteLine("\nColor");
-                    Console.WriteLine(colorValues);
+                    Console.WriteLine("\nColor:"  + colorValues);
                 }
             }
-            catch (IndexOutOfRangeException outOfRangeEx) //Excepcion para index  mayor al indicado
+            catch (IndexOutOfRangeException)//Excepcion para index  mayor al indicado
             {
-                System.Console.WriteLine(outOfRangeEx);
+                System.Console.WriteLine("Algo anda mal");
             }
         }
     }

@@ -6,5 +6,6 @@ namespace TideUpPhotografies
 {
     class Class2
     {
+       
     }
 }

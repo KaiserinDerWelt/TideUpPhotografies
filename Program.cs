@@ -6,7 +6,6 @@ namespace TideUpPhotografies
     {
         static void Main(string[] args)
         {
-            string divider = "<------>";
             //Marco de bienvenida
             Console.WriteLine("<-------------------------------------->");
             Console.WriteLine("<------Bienvenido a Photo Tide Up------>");
@@ -32,7 +31,7 @@ namespace TideUpPhotografies
                     //Lectura de columnas por loopeo
                     for(int columnas = 0; columnas<bidimensionalArray.GetLength(1); columnas ++)
                         {
-                        var chares = "RBGA";
+                        var chares = "CMYWGB";
                         var stringChares = new char[1];
                         var random = new Random(); //Metodo invocable random
                         for (int i = 0; i < stringChares.Length; i++)
@@ -49,7 +48,6 @@ namespace TideUpPhotografies
                 int photoSelectionParced = int.Parse(photoSelection);
 
                 //Analisis de colores
-                Console.WriteLine(divider);
                 var colorValues = "";
                 //Loop para colores
                 for ( int col =0; col<bidimensionalArray.GetLength(0); col ++)
@@ -58,14 +56,14 @@ namespace TideUpPhotografies
                     colorValues = colorValues + bidimensionalArray[photoSelectionParced, col];
             }
                 //Evaluador de color
-                Console.WriteLine(divider);
-                if(!colorValues.Contains("")&&!colorValues.Contains(""))
+                if(!colorValues.Contains("C")&&!colorValues.Contains("M") && !colorValues.Contains("Y"))
                 {
                     Console.WriteLine(" Blanco y Negro");
                 }
-                else if (colorValues.Contains("") || !colorValues.Contains("") || !colorValues.Contains(""))
+                else if (colorValues.Contains("C")  || !colorValues.Contains("M") || !colorValues.Contains("Y"))
                 {
-                    System.Console.WriteLine("Codigo de Color: ");
+                    Console.WriteLine("\nColor");
+                    Console.WriteLine(colorValues);
                 }
             }
             catch (IndexOutOfRangeException outOfRangeEx) //Excepcion para index  mayor al indicado

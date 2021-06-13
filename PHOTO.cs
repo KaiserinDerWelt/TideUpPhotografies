@@ -30,5 +30,46 @@ namespace TideUpPhotografies
                 Console.WriteLine("Los datos ingresados son invalidos, inicia de nuevo.");
             }
         }
+
+        //Metodo abstracto para guardar fotos
+        public abstract int storePhoto();
+
+        //Interface para datos de una fila
+        public int rowData
+        {
+            get
+            {
+                return row;
+            }
+            set
+            {
+                row = value;
+            }
+        }
+
+
+        //Interface para datos de una columna
+
+        public int columnData
+        {
+            get
+            {
+                return column;
+            }
+            set
+            {
+                column = value;
+            }
+        }
+
+
+        //Finalizer
+
+        ~PHOTO() {
+            row = 0;
+            column = 0;
+        }
+           
+        
     }
 }

@@ -4,8 +4,7 @@ using System.Text;
 
 namespace TideUpPhotografies
 {
-    class Class2
+    class COLORaSIGNATION
     {
-       
     }
 }

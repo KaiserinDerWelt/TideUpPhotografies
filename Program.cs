@@ -16,7 +16,7 @@ namespace TideUpPhotografies
             Console.WriteLine("Inserta el numero de columnas");
             var columns = Console.ReadLine();
             var columnsParced = int.Parse(columns);
-
+            //Creacion de la matriz y su asignacion por colores
         }
     }
 }
